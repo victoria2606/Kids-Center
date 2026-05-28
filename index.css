@@ -1,0 +1,62 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #daeef9; /* Светло синьото, което ползваме */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: block; /* Уверяваме се, че не е flex, който бута всичко вляво */
+  min-width: 100vw;
+}
+
+#root {
+  width: 100%;
+}
+
+/* Анимация за бутоните */
+a:hover, button:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Плавна поява на страницата */
+body {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Дефинираме анимацията */
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 133, 162, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 133, 162, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 133, 162, 0);
+  }
+}
+
+/* Класът, който ще приложим */
+.pulse-button {
+  animation: pulse-animation 2s infinite;
+  display: inline-block; /* Важно за анимацията */
+  transition: transform 0.3s ease;
+}
+
+.pulse-button:hover {
+  transform: scale(1.1) !important; /* Леко уголемяване при посочване */
+  animation: none; /* Спираме пулсацията, когато мишката е отгоре */
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
