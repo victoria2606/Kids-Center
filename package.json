@@ -1,6 +1,6 @@
 {"name":"kids-center",
 "type":"module",
-"scripts":{"dev":"vite", "start": "json-server --watch db.json --port $PORT --no-static"},
+"scripts":{"dev":"vite", "start": "json-server db.json --port $PORT --static public-empty"},
 "dependencies":{"@vitejs/plugin-react":"^5.1.2",
 "axios":"^1.13.2",
 "json-server":"^1.0.0-beta.15",
